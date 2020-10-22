@@ -51,8 +51,7 @@ struct ControlElement {
 static struct ControlElement *ControlElements = ControlElementsDefault;
 static int ControlElementsLength = sizeof(ControlElementsDefault)/sizeof(struct ControlElement);
 
-#define TRIGGER_DETECT(size) (((pos.x + size / 2 > CORRECT_TOUCH_X(event->x)) && (pos.x - size / 2 < CORRECT_TOUCH_X(event->x))) &&\
-                              ((pos.y + size / 2 > CORRECT_TOUCH_Y(event->y)) && (pos.y - size / 2 < CORRECT_TOUCH_Y(event->y))))
+#define TRIGGER_DETECT(size) ((event->x - pos.x) * (event->x - pos.x) + (event->y - pos.y) * (event->y - pos.y) < size * size)
 
 void touch_down(struct TouchEvent* event) {
     struct Position pos;
