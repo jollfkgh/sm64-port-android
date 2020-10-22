@@ -17,8 +17,8 @@
 #define SCREEN_WIDTH_API 720
 #define SCREEN_HEIGHT_API 540
 
-#define LEFT_EDGE ((int)floorf(SCREEN_WIDTH_API / 2 - SCREEN_HEIGHT_API / 2 * gfx_current_dimensions.aspect_ratio))
-#define RIGHT_EDGE ((int)ceilf(SCREEN_WIDTH_API / 2 + SCREEN_HEIGHT_API / 2 * gfx_current_dimensions.aspect_ratio))
+#define LEFT_EDGE ((int)0)
+#define RIGHT_EDGE ((int)540)
 
 #define CORRECT_TOUCH_X(x) (x * SCREEN_WIDTH_API)
 #define CORRECT_TOUCH_Y(y) (y * SCREEN_HEIGHT_API) 
