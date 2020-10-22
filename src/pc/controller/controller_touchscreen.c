@@ -68,7 +68,7 @@ void touch_down(struct TouchEvent* event) {
                     }
                     break;
                 case Button:
-                    if (TRIGGER_DETECT(120)) {
+                    if (TRIGGER_DETECT(68)) {
                         ControlElements[i].touchID = event->touchID;
                     }
                     break;
