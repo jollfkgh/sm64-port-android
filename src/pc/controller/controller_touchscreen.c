@@ -14,8 +14,8 @@
 #include "controller_api.h"
 #include "controller_touchscreen.h"
 
-#define SCREEN_WIDTH_API 1280
-#define SCREEN_HEIGHT_API 960
+#define SCREEN_WIDTH_API 720
+#define SCREEN_HEIGHT_API 540
 
 #define LEFT_EDGE ((int)floorf(SCREEN_WIDTH_API / 2 - SCREEN_HEIGHT_API / 2 * gfx_current_dimensions.aspect_ratio))
 #define RIGHT_EDGE ((int)ceilf(SCREEN_WIDTH_API / 2 + SCREEN_HEIGHT_API / 2 * gfx_current_dimensions.aspect_ratio))
