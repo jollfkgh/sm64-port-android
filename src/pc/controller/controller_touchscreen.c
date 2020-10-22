@@ -51,7 +51,7 @@ struct ControlElement {
 static struct ControlElement *ControlElements = ControlElementsDefault;
 static int ControlElementsLength = sizeof(ControlElementsDefault)/sizeof(struct ControlElement);
 
-#define TRIGGER_DETECT(size) ((event->x - pos.x) * (event->x - pos.x) + (event->y - pos.y) * (event->y - pos.y) < size * size)
+#define TRIGGER_DETECT(size) ((pos.x - event->x) * (pos.x - event->x) + (pos.y - event.y) * (pos.y - event.y) < size * size)
 
 void touch_down(struct TouchEvent* event) {
     struct Position pos;
@@ -101,7 +101,7 @@ void touch_motion(struct TouchEvent* event) {
                         ControlElements[i].joyY = y;
                         break;
                     case Button:
-                        if (ControlElements[i].slideTouch && !TRIGGER_DETECT(120)) {
+                        if (ControlElements[i].slideTouch && !TRIGGER_DETECT(68)) {
                             ControlElements[i].slideTouch = 0;
                             ControlElements[i].touchID = 0;
                         }
