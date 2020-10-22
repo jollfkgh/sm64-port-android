@@ -20,8 +20,8 @@
 #define LEFT_EDGE ((int)floorf(SCREEN_WIDTH_API / 2 - SCREEN_HEIGHT_API / 2 * gfx_current_dimensions.aspect_ratio))
 #define RIGHT_EDGE ((int)ceilf(SCREEN_WIDTH_API / 2 + SCREEN_HEIGHT_API / 2 * gfx_current_dimensions.aspect_ratio))
 
-#define CORRECT_TOUCH_X(x) (x)
-#define CORRECT_TOUCH_Y(y) (y) 
+#define CORRECT_TOUCH_X(x) (x * SCREEN_WIDTH_API)
+#define CORRECT_TOUCH_Y(y) (y * SCREEN_HEIGHT_API) 
 
 #define JOYSTICK_SIZE 157
 
