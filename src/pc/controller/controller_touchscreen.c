@@ -23,7 +23,7 @@
 #define CORRECT_TOUCH_X(x) ((x * (RIGHT_EDGE - LEFT_EDGE)) + LEFT_EDGE)
 #define CORRECT_TOUCH_Y(y) (y * SCREEN_HEIGHT_API)
 
-#define JOYSTICK_SIZE 280
+#define JOYSTICK_SIZE 157
 
 enum ControlElementType {
     Joystick,
