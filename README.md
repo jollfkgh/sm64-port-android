@@ -9,7 +9,7 @@ pkg install git wget make python getconf zip apksigner clang
 
 **Clone the repository:**
 ```sh
-git clone https://github.com/VDavid003/sm64-port-android
+git clone https://github.com/Colinxyz/sm64-port-android
 cd sm64-port-android
 ```
 
