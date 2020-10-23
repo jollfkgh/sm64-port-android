@@ -28,7 +28,7 @@
 #ifdef __ANDROID__
 extern int render_multiplier;
 #endif
-
+static bool resolutionSet = false;
 static SDL_Window *wnd;
 static int inverted_scancode_table[512];
 static int vsync_enabled = 0;
@@ -329,13 +329,15 @@ static void gfx_sdl_handle_events(void) {
                 break;
 #endif
             case SDL_WINDOWEVENT:
-                if (event.window.event == SDL_WINDOWEVENT_SIZE_CHANGED) {
+                if (event.window.event == SDL_WINDOWEVENT_SIZE_CHANGED && resolutionSet == false) {
                     if (event.window.data2 == 1920) {
                     window_width = 900;
                     window_height = 675;
+                    resolutionSet = true;
                     } else {
                     window_width = 720;
                     window_height = 540;
+                    resolutionSet = true;
                     }
                 }
                 break;
