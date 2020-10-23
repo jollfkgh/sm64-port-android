@@ -330,7 +330,7 @@ static void gfx_sdl_handle_events(void) {
 #endif
             case SDL_WINDOWEVENT:
                 if (event.window.event == SDL_WINDOWEVENT_SIZE_CHANGED) {
-                    if (event.window.data1 > 1440) {
+                    if (event.window.data1 > 1441) {
                     window_width = 900;
                     window_height = 675;
                     } else {
